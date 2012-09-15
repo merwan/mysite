@@ -1,9 +1,9 @@
 from django.db import models
 
-class Blog(models.model):
+class Blog(models.Model):
     name = models.CharField(max_length=200)
 
-class Post(models.model):
+class Post(models.Model):
     blog = models.ForeignKey(Blog)
     title = models.CharField(max_length=200)
     content = models.TextField()
